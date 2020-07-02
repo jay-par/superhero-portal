@@ -37,11 +37,25 @@ export const getAllHeroes = async () => {
   //   // 'silver surfer'
   // ];
   let heroes = [];
-  await axios.all([getHero('hulk'), getHero('thor')]).then((results) => {
-    results.map((hero) => {
-      const heroPayload = hero.data.data.results[0];
-      heroes.push(heroPayload);
+  await axios
+    .all([
+      getHero('hulk'),
+      getHero('Falcon'),
+      getHero('Iron man'),
+      getHero('captain america'),
+      getHero('Thanos'),
+      getHero('Spider-man'),
+      getHero('rocket raccoon'),
+      getHero('wolverine'),
+      getHero('storm'),
+      getHero('X-23'),
+    ])
+    .then((results) => {
+      results.map((hero) => {
+        const heroPayload = hero.data.data.results[0];
+        heroes.push(heroPayload);
+      });
     });
-  });
-  console.log(heroes);
+
+  return heroes;
 };

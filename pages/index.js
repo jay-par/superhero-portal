@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Navigation from '../src/components/Navigation';
 import { getAllHeroes } from '../src/apis/marvel';
 
-const Index = () => {
+const Index = (props) => {
   return (
     <div className="container">
       <Head>
@@ -11,24 +11,17 @@ const Index = () => {
       </Head>
 
       <main>
-        <Navigation />
+        <Navigation {...props} />
       </main>
     </div>
   );
 };
 
 export async function getStaticProps(context) {
-  let heroes;
-  // Promise.all([getHero('hulk'), getHero('wolverine')]).then((results) => {
-  //   const hulk = results[0];
-  //   const wolverine = results[1];
-  //   console.log(results[0].data.results.name);
-  //   heroes = { hulk, wolverine };
-  // });
-  await getAllHeroes();
+  let heroes = await getAllHeroes();
 
   return {
-    props: {},
+    props: { heroes },
   };
 }
 
