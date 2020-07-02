@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import Navigation from '../src/components/Navigation';
 import { getAllHeroes } from '../src/apis/marvel';
+import Navigation from '../src/components/Navigation';
 
 const Index = (props) => {
   return (
