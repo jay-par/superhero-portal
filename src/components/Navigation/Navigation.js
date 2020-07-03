@@ -1,17 +1,17 @@
-import List from '@material-ui/core/List';
 import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import { makeStyles } from '@material-ui/core/styles';
-import Link from 'next/link';
+import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import React from 'react';
 
 const useStyles = makeStyles({
   root: {
-    background: '#4615b2',
+    background: '#414A4C',
     width: '400px',
+    height: '100%',
   },
   item: {
     color: '#ffea00',
