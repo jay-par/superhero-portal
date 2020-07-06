@@ -5,6 +5,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
+import Link from 'next/link';
 import React from 'react';
 
 const useStyles = makeStyles({
@@ -25,12 +26,14 @@ const Navigation = ({ heroes }) => {
     <Drawer variant="permanent" anchor="left">
       <List className={classes.root}>
         {heroes.map((hero, index) => (
-          <ListItem button key={hero.name} className={classes.item}>
-            <ListItemIcon>
-              <AssignmentIndIcon />
-            </ListItemIcon>
-            <ListItemText primary={hero.name} />
-          </ListItem>
+          <Link href="/hero/[slug]" as={`/hero/${hero.name}`}>
+            <ListItem button key={hero.name} className={classes.item}>
+              <ListItemIcon>
+                <AssignmentIndIcon />
+              </ListItemIcon>
+              <ListItemText primary={hero.name} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Drawer>
