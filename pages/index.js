@@ -18,8 +18,18 @@ const Index = (props) => {
 };
 
 export async function getStaticProps(context) {
-  let heroes = await getAllHeroes();
-
+  const heroes = [
+    'hulk',
+    'Falcon',
+    'iron man',
+    'captain america',
+    'storm',
+    'thanos',
+    'spider-man',
+    'Groot',
+    'rocket raccoon',
+    'X-23',
+  ];
   return {
     props: { heroes },
   };

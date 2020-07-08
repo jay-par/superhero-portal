@@ -26,12 +26,12 @@ const Navigation = ({ heroes }) => {
     <Drawer variant="permanent" anchor="left">
       <List className={classes.root}>
         {heroes.map((hero, index) => (
-          <Link href="/hero/[slug]" as={`/hero/${hero.name}`}>
-            <ListItem button key={hero.name} className={classes.item}>
+          <Link href="/hero/[slug]" as={`/hero/${hero}`}>
+            <ListItem button key={hero} className={classes.item}>
               <ListItemIcon>
                 <AssignmentIndIcon />
               </ListItemIcon>
-              <ListItemText primary={hero.name} />
+              <ListItemText primary={hero} />
             </ListItem>
           </Link>
         ))}

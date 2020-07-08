@@ -24,18 +24,6 @@ export const getHero = async (hero) => {
 };
 
 export const getAllHeroes = async () => {
-  // const heroes = [
-  //   'hulk',
-  //   'wolverine',
-  //   // 'iron man',
-  //   // 'captain america',
-  //   // 'thor',
-  //   // 'thanos',
-  //   // 'spider-man',
-  //   // 'Groot',
-  //   // 'rocket raccoon',
-  //   // 'silver surfer'
-  // ];
   let heroes = [];
   await axios
     .all([
