@@ -8,19 +8,7 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export default function MyApp(props) {
   const { Component, pageProps } = props;
 
-  const theme = createMuiTheme({
-    palette: {
-      primary: {
-        main: '#556cd6',
-      },
-      secondary: {
-        main: '#19857b',
-      },
-      background: {
-        default: '#fff',
-      },
-    },
-  });
+  const theme = createMuiTheme({});
 
   React.useEffect(() => {
     // Remove the server-side injected CSS.
