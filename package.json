@@ -16,5 +16,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7"
+  }
 }
