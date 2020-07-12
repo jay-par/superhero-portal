@@ -1,15 +1,11 @@
 import Head from 'next/head';
 import { getAllHeroes } from '../src/apis/marvel';
 import Navigation from '../src/components/Navigation';
+import { makeStyles } from '@material-ui/core/styles';
 
 const Index = (props) => {
   return (
     <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <main>
         <Navigation {...props} />
       </main>
@@ -17,7 +13,7 @@ const Index = (props) => {
   );
 };
 
-export async function getStaticProps(context) {
+export const getStaticProps = async (context) => {
   const heroes = [
     'hulk',
     'Falcon',
@@ -33,6 +29,6 @@ export async function getStaticProps(context) {
   return {
     props: { heroes },
   };
-}
+};
 
 export default Index;
